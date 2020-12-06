@@ -11,8 +11,7 @@ frameworks mais utilizados atualmente.
 ## Árvore de aprendizado 💻🌲
 
 * <a href="./Js">JS</a> 
-  * Javascript
-  * ES6
+* ES6
 *  React
 *  React Native
 * Node
