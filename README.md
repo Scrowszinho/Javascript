@@ -12,7 +12,6 @@ frameworks mais utilizados atualmente.
 
 * <a href="./Js">JS</a> 
 * <a href="./Es6">ES6</a> 
-* ES6
 *  React
 *  React Native
 * Node
