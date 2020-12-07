@@ -125,3 +125,20 @@ var localiza = arr.find(function (item) {
 });
 console.log(localiza); // find roda o array em busca do teste logico realizado
 //
+// 
+// Aprendendo Arrow function
+
+var arrowFunc = arr.map(function (item) {
+  return item * 2;
+});
+console.log(arrowFunc); // Criando uma função utilizando seu propósito diretamente
+// sem precisar declarar a função.
+
+var test = function test() {
+  return {
+    nome: 'Gustavo'
+  };
+};
+
+console.log(test()); // Criando uma função de maneira direta(Não recomendada)
+// e retornando seu propósito de maneira direta.

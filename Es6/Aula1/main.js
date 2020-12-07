@@ -78,3 +78,16 @@ console.log(localiza);
 // find roda o array em busca do teste logico realizado
 //
 
+// 
+// Aprendendo Arrow function
+const arrowFunc = arr.map(item =>item * 2);
+console.log(arrowFunc);
+// Criando uma função utilizando seu propósito diretamente
+// sem precisar declarar a função.
+
+const test = () =>{ 
+    return {nome: 'Gustavo'}
+}
+console.log(test());
+// Criando uma função de maneira direta(Não recomendada)
+// e retornando seu propósito de maneira direta.
