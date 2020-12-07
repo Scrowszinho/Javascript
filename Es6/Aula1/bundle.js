@@ -99,3 +99,29 @@ document.getElementById('adcionar').onclick = function () {
 };
 
 minhaLista.mostraUser(); // Passando valores e exibindo o usuario
+// Operações com array
+
+var arr = [1, 2, 3, 4, 5, 7]; // Criação de um array com números
+
+var newArr = arr.map(function (item, index) {
+  return item + index;
+});
+console.log(newArr); // map retorna a soma do número + o seu index
+
+var soma = arr.reduce(function (total, next) {
+  return total + next;
+});
+console.log(soma); // Soma o anterior + o posterior
+// Começando com o index = 0 + item = 1
+
+var filtro = arr.filter(function (item) {
+  return item % 2 === 0;
+});
+console.log(filtro); // filter Filtra alguma operação e sempre retorna
+// true ou false
+
+var localiza = arr.find(function (item) {
+  return item === 4;
+});
+console.log(localiza); // find roda o array em busca do teste logico realizado
+//
