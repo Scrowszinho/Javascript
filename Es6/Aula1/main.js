@@ -135,3 +135,22 @@ const user2 = {...user, nome: 'Gustavo'}
 console.log(user2);
 // Pega todas as variaveis e substitui apenas um valor
 // desejado.
+
+
+// Template Literals
+const nome1 = 'Gustavo';
+const idade1 = 20;
+console.log('Meu nome é '+nome1+' e tenho '+idade1+' anos');
+console.log(`Meu nome é ${nome1} e tenho ${idade1} anos`);
+// Usando o template Literals para concatenar de maneira direta
+// as variaveis desejadas.
+
+// Object short syntax
+const usuo  = {
+    nome1,
+    idade1,
+    faculdade:'FATEC',
+}
+console.log(usuo);
+// Utilizando o short syntax para
+// adcionar variaveis com valores ja existentes.

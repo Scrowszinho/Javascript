@@ -213,3 +213,19 @@ var user2 = _objectSpread(_objectSpread({}, user), {}, {
 
 console.log(user2); // Pega todas as variaveis e substitui apenas um valor
 // desejado.
+// Template Literals
+
+var nome1 = 'Gustavo';
+var idade1 = 20;
+console.log('Meu nome é ' + nome1 + ' e tenho ' + idade1 + ' anos');
+console.log("Meu nome \xE9 ".concat(nome1, " e tenho ").concat(idade1, " anos")); // Usando o template Literals para concatenar de maneira direta
+// as variaveis desejadas.
+// Object short syntax
+
+var usuo = {
+  nome1: nome1,
+  idade1: idade1,
+  faculdade: 'FATEC'
+};
+console.log(usuo); // Utilizando o short syntax para
+// adcionar variaveis com valores ja existentes.
