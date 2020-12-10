@@ -2,6 +2,16 @@
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
@@ -142,3 +152,64 @@ var test = function test() {
 
 console.log(test()); // Criando uma função de maneira direta(Não recomendada)
 // e retornando seu propósito de maneira direta.
+// Valores padrão em constantes
+
+var somaPad = function somaPad() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+  return a + b;
+};
+
+console.log(somaPad(3));
+console.log(somaPad()); // Passando um ou mais valores para substituir
+// o padrão.
+// Aprendendo o conceito de desestruturação
+
+var user = {
+  nome: 'Luis Gustavo',
+  idade: 20,
+  endereco: {
+    cidade: 'Aparecida',
+    uf: 'SP'
+  }
+}; // Cria-se um array com outro array dentro
+
+function mostraUsuario(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade,
+      cidade = _ref.endereco.cidade;
+  console.log(nome, idade, cidade);
+} // E para obter a informação desejada, passa o nome
+// e a variavel que deseja acessar.
+
+
+mostraUsuario(user); //
+// Conceito de Rest / Spread
+
+var nome = user.nome,
+    idade = user.idade,
+    resto = _objectWithoutProperties(user, ["nome", "idade"]);
+
+console.log(resto); // Utilizando o ...var retorna todos os valores do array user
+// que não sejam definidos, no exemplo, todas do enderço.
+
+function som() {
+  for (var _len = arguments.length, params = new Array(_len), _key = 0; _key < _len; _key++) {
+    params[_key] = arguments[_key];
+  }
+
+  return params.reduce(function (total, next) {
+    return total + next;
+  });
+}
+
+console.log(som(1, 3, 4)); // Outra maneira de entender o rest mas agora com
+// arrow function.
+// Conceito de spread
+
+var user2 = _objectSpread(_objectSpread({}, user), {}, {
+  nome: 'Gustavo'
+});
+
+console.log(user2); // Pega todas as variaveis e substitui apenas um valor
+// desejado.

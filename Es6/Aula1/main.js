@@ -91,3 +91,47 @@ const test = () =>{
 console.log(test());
 // Criando uma função de maneira direta(Não recomendada)
 // e retornando seu propósito de maneira direta.
+
+// Valores padrão em constantes
+const somaPad = (a = 1,b = 1)=> a+b;
+console.log(somaPad(3));
+console.log(somaPad());
+// Passando um ou mais valores para substituir
+// o padrão.
+
+// Aprendendo o conceito de desestruturação
+const user = {
+    nome: 'Luis Gustavo',
+    idade: 20,
+    endereco: {
+    cidade: 'Aparecida',
+    uf: 'SP'
+    }
+}
+// Cria-se um array com outro array dentro
+function mostraUsuario({nome, idade, endereco:{cidade}}){
+console.log(nome, idade, cidade);
+}
+// E para obter a informação desejada, passa o nome
+// e a variavel que deseja acessar.
+mostraUsuario(user);
+//
+
+
+// Conceito de Rest / Spread
+const {nome, idade, ...resto} = user;
+console.log(resto);
+// Utilizando o ...var retorna todos os valores do array user
+// que não sejam definidos, no exemplo, todas do enderço.
+function som(...params){
+return params.reduce((total, next) => total+next);
+}
+console.log(som(1,3,4));
+// Outra maneira de entender o rest mas agora com
+// arrow function.
+
+// Conceito de spread
+const user2 = {...user, nome: 'Gustavo'}
+console.log(user2);
+// Pega todas as variaveis e substitui apenas um valor
+// desejado.
