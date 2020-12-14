@@ -1,5 +1,5 @@
 {
-  "name": "Aula1",
+  "name": "Modulo2",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -11,9 +11,11 @@
     "babel-loader": "8.0.0-beta.0",
     "webpack": "^5.10.1",
     "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0",
     "wepack-cli": "^0.0.1-security"
   },
   "scripts": {
-    "dev": "webpack --mode=development -w"
+    "dev": "webpack serve --mode=development",
+    "build": "webpack --mode=production"
   }
 }
