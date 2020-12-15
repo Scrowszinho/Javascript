@@ -1,20 +1,8 @@
-var epxress = require('express');
-var app = epxress();
+var app = require('./config/server');
+var rotaHome = require('./app/routes/home')(app);
+var rotaNoticias = require('./app/routes/noticias')(app);
+var rotaForm = require('./app/routes/formularioInclusao')(app);
 
-app.set('view engine', 'ejs');
-// Utilizando o ejs como motor de view
-
-app.get('/', (request, response)=>{
-    response.render("home/index");
-} );
-
-app.get('/inclusao_noticia', (request, response)=>{
-    response.render('admin/form_add_noticia');
-} );
-
-app.get('/noticias', (request, response)=>{
-    response.render('noticias/noticias');
-} );
 
 app.listen(8080, () =>{
 console.log('Servidor on 🚀');
