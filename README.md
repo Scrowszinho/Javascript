@@ -1,10 +1,10 @@
 # Javascript
 
-## Pra que serve este repósitorio 🥋
+## Pra que serve este repositório 🥋
 
-Esse repósitorio foi criado com o intuito do aprendizado do JS basico a té seus 
+Este repositório foi criado com o intuito do aprendizado dês do JS básico até seus 
 
-frameworks mais utilizados atualmente. 
+frameworks e ferramentas mais utilizadas atualmente. 
 
 <hr /> 
 
@@ -14,4 +14,4 @@ frameworks mais utilizados atualmente.
 * <a href="./Es6">ES6</a> 
 *  React
 *  React Native
-* Node
+* <a href='node' >Node</a>
