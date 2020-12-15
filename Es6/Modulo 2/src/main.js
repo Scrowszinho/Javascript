@@ -15,8 +15,28 @@ console.log(sub(9,2));
 // apenas com a variavel funcoes.
 
 
-//
-
+// Exercicio
 import classeUsuario, {idade as idadeUsuario}  from './function';
 classeUsuario.info();
 console.log(idadeUsuario);
+// 
+
+const minhaPro = () => new Promise((resolve,reject) =>{
+setTimeout(() => {resolve('Ok')},2000);
+});
+
+minhaPro().then(response =>{
+ console.log(response);
+});
+
+async function executaProm(){
+ const response = await minhaPro();
+ console.log(response);
+ console.log(await minhaPro());
+ console.log(await minhaPro());
+};
+// Awai só funciona dentro de uma função
+// async.
+// Poderia ser feito através de uma const 
+// const executaProm = async(){};
+executaProm();
