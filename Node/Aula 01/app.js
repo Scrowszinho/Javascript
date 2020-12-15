@@ -5,15 +5,19 @@ app.set('view engine', 'ejs');
 // Utilizando o ejs como motor de view
 
 app.get('/', (request, response)=>{
-    response.send("<html><body>Teste com Express</body></html>");
+    response.render("home/index");
 } );
 
-app.get('/moda', (request, response)=>{
-    response.render('secao/moda');
+app.get('/inclusao_noticia', (request, response)=>{
+    response.render('admin/form_add_noticia');
+} );
+
+app.get('/noticias', (request, response)=>{
+    response.render('noticias/noticias');
 } );
 
 app.listen(8080, () =>{
-console.log('Servior on 🚀');
+console.log('Servidor on 🚀');
 });
 
 // Colocando o servidor no ar com o express
