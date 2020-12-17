@@ -7,11 +7,10 @@ module.exports = (app) => {
         // Realizando a conexão com o BD via app
         // graças ao export da variavel que cria a requisição
         // no arquivo dbConnection.
+        var noticiasModel = app.app.models.noticiasModel;
 
-        connection.query('select * from noticias', (error, result) => {
+        noticiasModel.getNoticias(connection, (error, result) => {
             response.render("noticias/noticias", { noticias: result });
-        });
-        // Passando uma resposta em Json para o site
-
+        }); 
     });
 }
