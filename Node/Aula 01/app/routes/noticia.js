@@ -1,5 +1,5 @@
 module.exports = (app) => {
-    app.get('/noticias', (request, response) => {
+    app.get('/noticia', (request, response) => {
 
         // Conexão realizada de modo direta utilizando o Consign
 
@@ -8,8 +8,8 @@ module.exports = (app) => {
         // graças ao export da variavel que cria a requisição
         // no arquivo dbConnection.
 
-        connection.query('select * from noticias', (error, result) => {
-            response.render("noticias/noticias", { noticias: result });
+        connection.query('select * from noticias where id_noti = 1', (error, result) => {
+            response.render("noticias/noticia", { noticias: result });
         });
         // Passando uma resposta em Json para o site
 

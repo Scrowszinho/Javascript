@@ -1,12 +1,30 @@
 <!DOCTYPE html>
-	<html lang="pt-br">
-		<head>
-			<meta charset="utf-8"/>
-			<title>Portal de noticias</title>
-		</head>
-	<body>
+<html lang="pt-br">
 
+<head>
+	<meta charset="utf-8" />
+	<title>Noticias</title>
+</head>
+
+<body>
+
+	<table>
 		<h1>Noticia</h1>
+		<tr>
+			<td>Titulo</td>
+			<td>Noticia</td>
+		</tr>
+		<tr>
+			<td>
+				<%= noticias[0].titulo %>
+			</td>
+			<td>
+				<%= noticias[0].noticia %>
+			</td>
+		</tr>
+	</table>
 
-	</body>
+
+</body>
+
 </html>
