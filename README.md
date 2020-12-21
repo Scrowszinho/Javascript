@@ -15,4 +15,3 @@ frameworks e ferramentas mais utilizadas atualmente.
 *  React
 *  React Native
 * <a href='./Node'>Node</a>
-* TypeScript
