@@ -1,2 +1,2 @@
-const teste = 'Teste 2';
+const teste = 'Teste Web';
 console.log(teste);
