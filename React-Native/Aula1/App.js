@@ -1,53 +1,67 @@
-import { StatusBar } from 'expo-status-bar';
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
 import styled from 'styled-components/native'; 
 
-const Texto = styled.Text`
-font-weight: bold;
-color: ${props=>props.cor};
-font-size: 30px;
-`;
-const PageView = styled.View`
-   flex:1;
-   alignItems: center;
-   backgroundColor: #FFF;
+
+const Page = styled.SafeAreaView`
+flex:1;
 `;
 
-/* 
- const Texto = ()=>{
-   return(
-     <Text>Retornando texto Forma 1</Text>
-   );
- }
+const Header = styled.View`
+flex-direction:row;
+justifyContent:center;
+align-items:flex-start;
+flex-wrap:wrap;
+backgroundColor: #EEE;
+height:100px;
+`;
+
+/* FlexBox Conceitos
+
+Flex: row, column, row/column-reverse
+
+ Align-Items
+ Alinha todos em formato de linha, diferente do
+ Justify-Content que alinha em formato de coluna
+
+Justify Content
+Flex: Padrão
+Flex-End: Padrão invertido
+Center: centraliza ao meio
+Space-Between: Preenche todo o espaço com espaçamento entre eles
+Space-Around: Preenche todo o espaço com espaçamento igualitario
+
+ Flex-Wrap:wrap;
+ Quebra a linha e exibe itens abaixo
 */
 
-/* 
-  function TextoInicial(){
-    return(
-      <Text>Retornando texto Forma 2</Text>
-    );
-  }
-*/
-
-// class TextoInicial extends Component{
-//   render(){
-//     return(
-//       <Text>Retornando texto Forma 3</Text>
-//     );
-//   }
-// }
-
-// const TextoInicial = () => <Text>Retornando texto Forma 4</Text>;
+const Quadrado = styled.View`
+backgroundColor:${props=>props.color};
+width:50px;
+height:50px;
+`;
+/* Ao declarar flex:1 o elemento fica do mesmo tamanho */
 
 
 export default function App() {
   return (
-    <PageView>
-      <Texto cor="pink">Teste</Texto>
-      <Texto cor="black">Texto mesclado com o StyleSheet</Texto>
-      <StatusBar style="auto" />
-    </PageView>
+    <Page>
+      <Header>
+      <Quadrado color="red"></Quadrado>
+      <Quadrado color="green"></Quadrado>
+      <Quadrado color="blue"></Quadrado>
+      <Quadrado color="pink"></Quadrado>
+
+      <Quadrado color="red"></Quadrado>
+      <Quadrado color="green"></Quadrado>
+      <Quadrado color="blue"></Quadrado>
+      <Quadrado color="pink"></Quadrado>
+
+      <Quadrado color="red"></Quadrado>
+      <Quadrado color="green"></Quadrado>
+      <Quadrado color="blue"></Quadrado>
+      <Quadrado color="pink"></Quadrado>
+      </Header>
+    </Page>
   );
 }
 
