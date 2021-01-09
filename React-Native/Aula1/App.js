@@ -15,25 +15,6 @@ backgroundColor: #EEE;
 height:100px;
 `;
 
-/* FlexBox Conceitos
-
-Flex: row, column, row/column-reverse
-
- Align-Items
- Alinha todos em formato de linha, diferente do
- Justify-Content que alinha em formato de coluna
-
-Justify Content
-Flex: Padrão
-Flex-End: Padrão invertido
-Center: centraliza ao meio
-Space-Between: Preenche todo o espaço com espaçamento entre eles
-Space-Around: Preenche todo o espaço com espaçamento igualitario
-
- Flex-Wrap:wrap;
- Quebra a linha e exibe itens abaixo
-*/
-
 const Quadrado = styled.View`
 backgroundColor:${props=>props.color};
 width:50px;
