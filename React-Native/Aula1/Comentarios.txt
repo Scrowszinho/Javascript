@@ -26,3 +26,7 @@ Valor que voce exibe na tela, o props
  State:
  Valor que você utiliza pra exibir na tela, o state é uma
  variável interna e que pode ser mudada.
+
+Utilização do Input
+Utilizando o campo input juntamente a uma state, no arquivo
+App1.js, para alterar um campo de texto com a digitação.
