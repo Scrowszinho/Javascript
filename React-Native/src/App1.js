@@ -39,3 +39,6 @@ export default function App() {
   );
 }
 
+// Utilização do Input
+// Utilizando o campo input juntamente a uma state, no arquivo
+// App1.js, para alterar um campo de texto com a digitação.
