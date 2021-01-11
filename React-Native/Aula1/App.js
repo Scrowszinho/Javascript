@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {Text} from 'react-native';
 import styled from 'styled-components/native'; 
 
 
@@ -20,8 +21,16 @@ backgroundColor:${props=>props.color};
 width:50px;
 height:50px;
 `;
+
 /* Ao declarar flex:1 o elemento fica do mesmo tamanho */
 
+const Hello = (props) => {
+  const [name , setName] = useState('Gustavo');
+  return(
+    <Text>Nome: {name}</Text>
+  );
+}
+// Noção de props e state
 
 export default function App() {
   return (
@@ -42,6 +51,8 @@ export default function App() {
       <Quadrado color="blue"></Quadrado>
       <Quadrado color="pink"></Quadrado>
       </Header>
+
+      <Hello frase="Outra Props" />
     </Page>
   );
 }

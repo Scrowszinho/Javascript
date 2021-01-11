@@ -15,3 +15,14 @@ Space-Around: Preenche todo o espaço com espaçamento igualitario
 
  Flex-Wrap:wrap;
  Quebra a linha e exibe itens abaixo
+
+
+ Props vs States
+
+Props: 
+Valor que voce exibe na tela, o props 
+é uma variável externa e que não pode ser alterada.
+
+ State:
+ Valor que você utiliza pra exibir na tela, o state é uma
+ variável interna e que pode ser mudada.
