@@ -26,3 +26,7 @@ Valor que voce exibe na tela, o props
  State:
  Valor que você utiliza pra exibir na tela, o state é uma
  variável interna e que pode ser mudada.
+
+ KeyboardAvoidingView
+ Permite que o teclado se sobreponha aos componentes do app
+ geralmente muito utilizado em Ios com algumas propriedades.
