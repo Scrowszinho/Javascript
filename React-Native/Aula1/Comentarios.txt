@@ -19,9 +19,9 @@ Space-Around: Preenche todo o espaço com espaçamento igualitario
 
  Props vs States
 
-Props: 
-Valor que voce exibe na tela, o props 
-é uma variável externa e que não pode ser alterada.
+ Props: 
+ Valor que voce exibe na tela, o props 
+ é uma variável externa e que não pode ser alterada.
 
  State:
  Valor que você utiliza pra exibir na tela, o state é uma
@@ -35,3 +35,22 @@ Valor que voce exibe na tela, o props
  A componentização é uma das partes essenciais para a organização
  do código em RN. Componentizando alguma coisa você pode reutiliza-la
  em outras aplicações ou em outras telas da mesma aplicação.
+
+Imagem 
+    Para uma imagem ocupar toda area utilizamos o resizeMode com algumas 
+    opções:
+    Cover - Cobre toda a area 
+    Stretch - Se estica pra caber na area
+    Center - Centraliza a imagem pra caber na area
+    Contain - A imagem se ajusta porém reduz seu tamanho
+    Repeat - Repete a imagem até cobrir toda a area
+ 
+ DefaultSource - Exibe uma imagem enquanto a outra não carrega
+    onLoadStart = quando o carregamento da imagem começar
+    onLoad = quando o carregamento da imagem terminar
+    onError = {(e) => setStatus(e.nativeEvent.error)}
+    exibe o status do error.
+
+    onProgress={(e) => setStatus(e.nativeEvent.total)}
+    exibe o progresso do carregamento, obs funciona apenas no
+    ios.
