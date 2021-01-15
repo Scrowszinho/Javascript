@@ -30,3 +30,8 @@ Valor que voce exibe na tela, o props
  KeyboardAvoidingView
  Permite que o teclado se sobreponha aos componentes do app
  geralmente muito utilizado em Ios com algumas propriedades.
+
+ Componentização
+ A componentização é uma das partes essenciais para a organização
+ do código em RN. Componentizando alguma coisa você pode reutiliza-la
+ em outras aplicações ou em outras telas da mesma aplicação.
